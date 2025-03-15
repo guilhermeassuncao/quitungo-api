@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paginas",
+  "info": {
+    "singularName": "pagina",
+    "pluralName": "paginas",
+    "displayName": "Páginas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Conteudo": {
+      "type": "dynamiczone",
+      "components": [
+        "pagina.titulo",
+        "pagina.bloco-de-texto"
+      ],
+      "required": true
+    }
+  }
+}

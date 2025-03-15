@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pagina_bloco_de_textos",
+  "info": {
+    "displayName": "Bloco de Texto",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Texto": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_pagina_titulos",
+  "info": {
+    "displayName": "Título"
+  },
+  "options": {},
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Tamanho": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "required": true
+    }
+  }
+}
