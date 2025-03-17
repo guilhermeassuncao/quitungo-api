@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pagina_audios",
+  "info": {
+    "displayName": "Áudio"
+  },
+  "options": {},
+  "attributes": {
+    "Audio": {
+      "allowedTypes": [
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

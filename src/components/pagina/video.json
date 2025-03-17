@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pagina_videos",
+  "info": {
+    "displayName": "Vídeo"
+  },
+  "options": {},
+  "attributes": {
+    "Video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

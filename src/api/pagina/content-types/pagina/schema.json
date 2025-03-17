@@ -11,11 +11,30 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Artesanato e Artes Plásticas",
+        "Audiovisuais",
+        "Cartilhas",
+        "Cartografias",
+        "Entrevistas e Reportagens",
+        "Fotografias",
+        "Literatura e Teatro",
+        "Trabalhos Acadêmicos",
+        "Trabalhos Técnicos"
+      ],
+      "required": true
+    },
     "Conteudo": {
       "type": "dynamiczone",
       "components": [
         "pagina.titulo",
-        "pagina.bloco-de-texto"
+        "pagina.texto",
+        "pagina.imagem",
+        "pagina.video",
+        "pagina.midia-com-texto",
+        "pagina.galeria"
       ],
       "required": true
     }

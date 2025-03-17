@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pagina_galerias",
+  "info": {
+    "displayName": "Galeria"
+  },
+  "options": {},
+  "attributes": {
+    "Galeria": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

@@ -414,8 +414,29 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Categoria: Schema.Attribute.Enumeration<
+      [
+        'Artesanato e Artes Pl\u00E1sticas',
+        'Audiovisuais',
+        'Cartilhas',
+        'Cartografias',
+        'Entrevistas e Reportagens',
+        'Fotografias',
+        'Literatura e Teatro',
+        'Trabalhos Acad\u00EAmicos',
+        'Trabalhos T\u00E9cnicos',
+      ]
+    > &
+      Schema.Attribute.Required;
     Conteudo: Schema.Attribute.DynamicZone<
-      ['pagina.titulo', 'pagina.bloco-de-texto']
+      [
+        'pagina.titulo',
+        'pagina.texto',
+        'pagina.imagem',
+        'pagina.video',
+        'pagina.midia-com-texto',
+        'pagina.galeria',
+      ]
     > &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;

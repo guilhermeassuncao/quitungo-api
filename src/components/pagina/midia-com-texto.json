@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_pagina_midia_com_textos",
+  "info": {
+    "displayName": "Mídia com Texto"
+  },
+  "options": {},
+  "attributes": {
+    "Imagem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pagina.imagem",
+      "required": true
+    },
+    "Texto": {
+      "type": "customField",
+      "options": {
+        "preset": "Custom"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

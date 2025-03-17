@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pagina_imagems",
+  "info": {
+    "displayName": "Imagem"
+  },
+  "options": {},
+  "attributes": {
+    "Imagem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,13 +1,69 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface PaginaBlocoDeTexto extends Struct.ComponentSchema {
-  collectionName: 'components_pagina_bloco_de_textos';
+export interface PaginaAudio extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_audios';
   info: {
-    description: '';
-    displayName: 'Bloco de Texto';
+    displayName: '\u00C1udio';
   };
   attributes: {
-    Texto: Schema.Attribute.Blocks;
+    Audio: Schema.Attribute.Media<'audios'> & Schema.Attribute.Required;
+  };
+}
+
+export interface PaginaGaleria extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_galerias';
+  info: {
+    displayName: 'Galeria';
+  };
+  attributes: {
+    Galeria: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+  };
+}
+
+export interface PaginaImagem extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_imagems';
+  info: {
+    displayName: 'Imagem';
+  };
+  attributes: {
+    Imagem: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface PaginaMidiaComTexto extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_midia_com_textos';
+  info: {
+    displayName: 'M\u00EDdia com Texto';
+  };
+  attributes: {
+    Imagem: Schema.Attribute.Component<'pagina.imagem', false> &
+      Schema.Attribute.Required;
+    Texto: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'Custom';
+        }
+      >;
+  };
+}
+
+export interface PaginaTexto extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_textos';
+  info: {
+    description: '';
+    displayName: 'Texto';
+  };
+  attributes: {
+    Texto: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'Custom';
+        }
+      >;
   };
 }
 
@@ -23,11 +79,26 @@ export interface PaginaTitulo extends Struct.ComponentSchema {
   };
 }
 
+export interface PaginaVideo extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_videos';
+  info: {
+    displayName: 'V\u00EDdeo';
+  };
+  attributes: {
+    Video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'pagina.bloco-de-texto': PaginaBlocoDeTexto;
+      'pagina.audio': PaginaAudio;
+      'pagina.galeria': PaginaGaleria;
+      'pagina.imagem': PaginaImagem;
+      'pagina.midia-com-texto': PaginaMidiaComTexto;
+      'pagina.texto': PaginaTexto;
       'pagina.titulo': PaginaTitulo;
+      'pagina.video': PaginaVideo;
     }
   }
 }
