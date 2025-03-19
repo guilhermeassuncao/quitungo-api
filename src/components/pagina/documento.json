@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pagina_documentos",
+  "info": {
+    "displayName": "Documento"
+  },
+  "options": {},
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Documento": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pagina_youtubes",
+  "info": {
+    "displayName": "Youtube"
+  },
+  "options": {},
+  "attributes": {
+    "Url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

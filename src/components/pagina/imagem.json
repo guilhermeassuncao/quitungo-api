@@ -1,17 +1,21 @@
 {
   "collectionName": "components_pagina_imagems",
   "info": {
-    "displayName": "Imagem"
+    "displayName": "Imagem",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Imagem": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Autor": {
+      "type": "string"
     }
   }
 }

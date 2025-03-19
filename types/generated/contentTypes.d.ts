@@ -436,6 +436,9 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
         'pagina.video',
         'pagina.midia-com-texto',
         'pagina.galeria',
+        'pagina.documento',
+        'pagina.audio',
+        'pagina.youtube',
       ]
     > &
       Schema.Attribute.Required;

@@ -10,6 +10,17 @@ export interface PaginaAudio extends Struct.ComponentSchema {
   };
 }
 
+export interface PaginaDocumento extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_documentos';
+  info: {
+    displayName: 'Documento';
+  };
+  attributes: {
+    Documento: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    Nome: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface PaginaGaleria extends Struct.ComponentSchema {
   collectionName: 'components_pagina_galerias';
   info: {
@@ -23,9 +34,11 @@ export interface PaginaGaleria extends Struct.ComponentSchema {
 export interface PaginaImagem extends Struct.ComponentSchema {
   collectionName: 'components_pagina_imagems';
   info: {
+    description: '';
     displayName: 'Imagem';
   };
   attributes: {
+    Autor: Schema.Attribute.String;
     Imagem: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
@@ -89,16 +102,28 @@ export interface PaginaVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface PaginaYoutube extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_youtubes';
+  info: {
+    displayName: 'Youtube';
+  };
+  attributes: {
+    Url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'pagina.audio': PaginaAudio;
+      'pagina.documento': PaginaDocumento;
       'pagina.galeria': PaginaGaleria;
       'pagina.imagem': PaginaImagem;
       'pagina.midia-com-texto': PaginaMidiaComTexto;
       'pagina.texto': PaginaTexto;
       'pagina.titulo': PaginaTitulo;
       'pagina.video': PaginaVideo;
+      'pagina.youtube': PaginaYoutube;
     }
   }
 }
