@@ -47,10 +47,11 @@ export interface PaginaImagem extends Struct.ComponentSchema {
   };
 }
 
-export interface PaginaMidiaComTexto extends Struct.ComponentSchema {
-  collectionName: 'components_pagina_midia_com_textos';
+export interface PaginaMidia extends Struct.ComponentSchema {
+  collectionName: 'components_pagina_midias';
   info: {
-    displayName: 'M\u00EDdia com Texto';
+    description: '';
+    displayName: 'Midia';
   };
   attributes: {
     Imagem: Schema.Attribute.Component<'pagina.imagem', false> &
@@ -125,7 +126,7 @@ declare module '@strapi/strapi' {
       'pagina.documento': PaginaDocumento;
       'pagina.galeria': PaginaGaleria;
       'pagina.imagem': PaginaImagem;
-      'pagina.midia-com-texto': PaginaMidiaComTexto;
+      'pagina.midia': PaginaMidia;
       'pagina.texto': PaginaTexto;
       'pagina.titulo': PaginaTitulo;
       'pagina.video': PaginaVideo;

@@ -33,11 +33,11 @@
         "pagina.texto",
         "pagina.imagem",
         "pagina.video",
-        "pagina.midia-com-texto",
         "pagina.galeria",
         "pagina.documento",
         "pagina.audio",
-        "pagina.youtube"
+        "pagina.youtube",
+        "pagina.midia"
       ],
       "required": true
     },

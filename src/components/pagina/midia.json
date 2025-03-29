@@ -1,16 +1,11 @@
 {
-  "collectionName": "components_pagina_midia_com_textos",
+  "collectionName": "components_pagina_midias",
   "info": {
-    "displayName": "Mídia com Texto"
+    "displayName": "Midia",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Imagem": {
-      "type": "component",
-      "repeatable": false,
-      "component": "pagina.imagem",
-      "required": true
-    },
     "Texto": {
       "type": "customField",
       "options": {
@@ -18,6 +13,12 @@
       },
       "required": true,
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "Imagem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pagina.imagem",
+      "required": true
     }
   }
 }

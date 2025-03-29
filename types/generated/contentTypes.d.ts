@@ -436,11 +436,11 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
         'pagina.texto',
         'pagina.imagem',
         'pagina.video',
-        'pagina.midia-com-texto',
         'pagina.galeria',
         'pagina.documento',
         'pagina.audio',
         'pagina.youtube',
+        'pagina.midia',
       ]
     > &
       Schema.Attribute.Required;
