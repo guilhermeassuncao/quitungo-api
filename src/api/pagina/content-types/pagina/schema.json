@@ -40,6 +40,12 @@
         "pagina.youtube"
       ],
       "required": true
+    },
+    "Capa": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pagina.imagem",
+      "required": true
     }
   }
 }

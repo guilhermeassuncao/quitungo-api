@@ -3,10 +3,12 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface PaginaAudio extends Struct.ComponentSchema {
   collectionName: 'components_pagina_audios';
   info: {
+    description: '';
     displayName: '\u00C1udio';
   };
   attributes: {
     Audio: Schema.Attribute.Media<'audios'> & Schema.Attribute.Required;
+    Autor: Schema.Attribute.String;
   };
 }
 
@@ -24,10 +26,12 @@ export interface PaginaDocumento extends Struct.ComponentSchema {
 export interface PaginaGaleria extends Struct.ComponentSchema {
   collectionName: 'components_pagina_galerias';
   info: {
+    description: '';
     displayName: 'Galeria';
   };
   attributes: {
-    Galeria: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    Galeria: Schema.Attribute.Component<'pagina.imagem', true> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -95,9 +99,11 @@ export interface PaginaTitulo extends Struct.ComponentSchema {
 export interface PaginaVideo extends Struct.ComponentSchema {
   collectionName: 'components_pagina_videos';
   info: {
+    description: '';
     displayName: 'V\u00EDdeo';
   };
   attributes: {
+    Autor: Schema.Attribute.String;
     Video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
   };
 }

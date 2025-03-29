@@ -1,16 +1,15 @@
 {
   "collectionName": "components_pagina_galerias",
   "info": {
-    "displayName": "Galeria"
+    "displayName": "Galeria",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Galeria": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": true,
+      "type": "component",
+      "repeatable": true,
+      "component": "pagina.imagem",
       "required": true
     }
   }

@@ -1,17 +1,21 @@
 {
   "collectionName": "components_pagina_audios",
   "info": {
-    "displayName": "Áudio"
+    "displayName": "Áudio",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Audio": {
-      "allowedTypes": [
-        "audios"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "Autor": {
+      "type": "string"
     }
   }
 }

@@ -414,6 +414,8 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Capa: Schema.Attribute.Component<'pagina.imagem', false> &
+      Schema.Attribute.Required;
     Categoria: Schema.Attribute.Enumeration<
       [
         'Artesanato e Artes Pl\u00E1sticas',
