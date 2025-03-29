@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pagina_dados",
+  "info": {
+    "displayName": "Dados"
+  },
+  "options": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descricao": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
