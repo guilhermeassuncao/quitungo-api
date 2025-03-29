@@ -11,21 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Categoria": {
-      "type": "enumeration",
-      "enum": [
-        "Artesanato e Artes Plásticas",
-        "Audiovisuais",
-        "Cartilhas",
-        "Cartografias",
-        "Entrevistas e Reportagens",
-        "Fotografias",
-        "Literatura e Teatro",
-        "Trabalhos Acadêmicos",
-        "Trabalhos Técnicos"
-      ],
-      "required": true
-    },
     "Conteudo": {
       "type": "dynamiczone",
       "components": [
@@ -46,6 +31,11 @@
       "repeatable": false,
       "component": "pagina.imagem",
       "required": true
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria"
     }
   }
 }

@@ -416,20 +416,10 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
   attributes: {
     Capa: Schema.Attribute.Component<'pagina.imagem', false> &
       Schema.Attribute.Required;
-    Categoria: Schema.Attribute.Enumeration<
-      [
-        'Artesanato e Artes Pl\u00E1sticas',
-        'Audiovisuais',
-        'Cartilhas',
-        'Cartografias',
-        'Entrevistas e Reportagens',
-        'Fotografias',
-        'Literatura e Teatro',
-        'Trabalhos Acad\u00EAmicos',
-        'Trabalhos T\u00E9cnicos',
-      ]
-    > &
-      Schema.Attribute.Required;
+    categorias: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::categoria.categoria'
+    >;
     Conteudo: Schema.Attribute.DynamicZone<
       [
         'pagina.titulo',
