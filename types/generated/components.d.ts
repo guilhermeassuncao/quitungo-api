@@ -8,7 +8,6 @@ export interface PaginaAudio extends Struct.ComponentSchema {
   };
   attributes: {
     Audio: Schema.Attribute.Media<'audios'> & Schema.Attribute.Required;
-    Autor: Schema.Attribute.String;
   };
 }
 
@@ -115,7 +114,6 @@ export interface PaginaVideo extends Struct.ComponentSchema {
     displayName: 'V\u00EDdeo';
   };
   attributes: {
-    Autor: Schema.Attribute.String;
     Video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
   };
 }

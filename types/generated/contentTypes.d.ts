@@ -402,6 +402,48 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHistoriaHistoria extends Struct.SingleTypeSchema {
+  collectionName: 'historias';
+  info: {
+    displayName: 'Quem Somos';
+    pluralName: 'historias';
+    singularName: 'historia';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Conteudo: Schema.Attribute.DynamicZone<
+      [
+        'pagina.youtube',
+        'pagina.video',
+        'pagina.titulo',
+        'pagina.texto',
+        'pagina.midia',
+        'pagina.imagem',
+        'pagina.galeria',
+        'pagina.documento',
+        'pagina.dados',
+        'pagina.audio',
+      ]
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::historia.historia'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
   collectionName: 'paginas';
   info: {
@@ -962,6 +1004,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::categoria.categoria': ApiCategoriaCategoria;
+      'api::historia.historia': ApiHistoriaHistoria;
       'api::pagina.pagina': ApiPaginaPagina;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

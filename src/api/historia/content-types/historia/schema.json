@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "historias",
+  "info": {
+    "singularName": "historia",
+    "pluralName": "historias",
+    "displayName": "Quem Somos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Conteudo": {
+      "type": "dynamiczone",
+      "components": [
+        "pagina.youtube",
+        "pagina.video",
+        "pagina.titulo",
+        "pagina.texto",
+        "pagina.midia",
+        "pagina.imagem",
+        "pagina.galeria",
+        "pagina.documento",
+        "pagina.dados",
+        "pagina.audio"
+      ],
+      "required": true
+    }
+  }
+}

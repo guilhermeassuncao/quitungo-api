@@ -13,9 +13,6 @@
       "allowedTypes": [
         "videos"
       ]
-    },
-    "Autor": {
-      "type": "string"
     }
   }
 }
