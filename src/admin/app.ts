@@ -4,6 +4,7 @@ import {
     Italic,
     Essentials,
     List,
+    Link,
     Paragraph,
     Table,
     BlockQuote
@@ -23,6 +24,7 @@ const myCustomPreset = {
             Italic,
             Essentials,
             List,
+            Link,
             Paragraph,
             Table,
             BlockQuote,
@@ -31,6 +33,7 @@ const myCustomPreset = {
             'bold',
             'italic',
             'bulletedList',
+            'link',
             'insertTable',
             'blockquote',
             'undo',

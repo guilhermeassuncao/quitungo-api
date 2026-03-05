@@ -53,7 +53,7 @@ export interface PaginaImagem extends Struct.ComponentSchema {
   };
   attributes: {
     Autor: Schema.Attribute.String;
-    Imagem: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Imagem: Schema.Attribute.Media<'images'>;
   };
 }
 
