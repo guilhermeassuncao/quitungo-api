@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "amigos",
+  "info": {
+    "singularName": "amigo",
+    "pluralName": "amigos",
+    "displayName": "Amigos e Parceiros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Conteudo": {
+      "type": "dynamiczone",
+      "components": [
+        "pagina.youtube",
+        "pagina.video",
+        "pagina.titulo",
+        "pagina.texto",
+        "pagina.midia",
+        "pagina.imagem",
+        "pagina.galeria",
+        "pagina.documento",
+        "pagina.dados",
+        "pagina.audio"
+      ]
+    }
+  }
+}
