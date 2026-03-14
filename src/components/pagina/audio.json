@@ -13,6 +13,9 @@
       "allowedTypes": [
         "audios"
       ]
+    },
+    "Autor": {
+      "type": "string"
     }
   }
 }

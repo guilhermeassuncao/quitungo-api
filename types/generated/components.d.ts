@@ -8,6 +8,7 @@ export interface PaginaAudio extends Struct.ComponentSchema {
   };
   attributes: {
     Audio: Schema.Attribute.Media<'audios'> & Schema.Attribute.Required;
+    Autor: Schema.Attribute.String;
   };
 }
 
@@ -25,9 +26,11 @@ export interface PaginaDados extends Struct.ComponentSchema {
 export interface PaginaDocumento extends Struct.ComponentSchema {
   collectionName: 'components_pagina_documentos';
   info: {
+    description: '';
     displayName: 'Documento';
   };
   attributes: {
+    Autor: Schema.Attribute.String;
     Documento: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
     Nome: Schema.Attribute.String & Schema.Attribute.Required;
   };
