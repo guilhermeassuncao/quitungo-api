@@ -16,8 +16,7 @@
       "required": true
     },
     "Descricao": {
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "Autoria": {
       "type": "string"

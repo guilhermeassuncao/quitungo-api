@@ -24,7 +24,7 @@ const CAMPOS = {
     ],
     fields: {
       Titulo: ['Título', 'Título completo da obra. Aparece no cartão da listagem e no topo da página do post.'],
-      Descricao: ['Resumo', 'Uma ou duas frases, até 300 caracteres. Aparece no cartão da listagem e abaixo do título na página. O texto completo vai em Conteúdo, no bloco Texto.'],
+      Descricao: ['Resumo (opcional)', 'Se deixar vazio, o cartão da listagem usa o início do primeiro bloco de Texto automaticamente. Preencha só se quiser uma chamada diferente. Uma ou duas frases.'],
       Autoria: ['Autoria', 'Quem escreveu ou produziu a obra. Ex.: Simone Raquel Batista Ferreira.'],
       Ano: ['Ano', 'Ano da publicação ou produção. Ex.: 2018.'],
       Referencia: ['Referência bibliográfica', 'Onde foi publicado. Ex.: Revista Geografares, n. 8, 2010. Aparece no fim da página do post.'],
