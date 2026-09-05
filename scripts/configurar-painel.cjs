@@ -15,7 +15,6 @@ const CAMPOS = {
     list: ['Titulo', 'categorias', 'Autoria', 'updatedAt'],
     edit: [
       [['Titulo', 12]],
-      [['Descricao', 12]],
       [['Autoria', 6], ['Ano', 6]],
       [['Referencia', 12]],
       [['categorias', 6]],
@@ -24,13 +23,12 @@ const CAMPOS = {
     ],
     fields: {
       Titulo: ['Título', 'Título completo da obra. Aparece no cartão da listagem e no topo da página do post.'],
-      Descricao: ['Resumo (opcional)', 'Se deixar vazio, o cartão da listagem usa o início do primeiro bloco de Texto automaticamente. Preencha só se quiser uma chamada diferente. Uma ou duas frases.'],
       Autoria: ['Autoria', 'Quem escreveu ou produziu a obra. Ex.: Simone Raquel Batista Ferreira.'],
       Ano: ['Ano', 'Ano da publicação ou produção. Ex.: 2018.'],
       Referencia: ['Referência bibliográfica', 'Onde foi publicado. Ex.: Revista Geografares, n. 8, 2010. Aparece no fim da página do post.'],
       categorias: ['Categoria', 'Seção do site onde o post aparece. Obrigatória: sem categoria o post não aparece em lugar nenhum.'],
       Capa: ['Imagem de capa', 'Foto que ilustra o post no cartão da listagem. Envie a imagem E preencha o crédito.'],
-      Conteudo: ['Conteúdo', 'Blocos que formam a página do post, na ordem em que aparecem. Título, resumo e autoria já aparecem automaticamente, não precisa repetir aqui.'],
+      Conteudo: ['Conteúdo', 'Blocos que formam a página do post, na ordem em que aparecem. Comece por um bloco Texto: o início dele vira a chamada do cartão na listagem. Título e autoria já aparecem automaticamente, não precisa repetir aqui.'],
     },
   },
   'api::historia.historia': {
