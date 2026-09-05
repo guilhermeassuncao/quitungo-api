@@ -23,9 +23,9 @@ const CAMPOS = {
     ],
     fields: {
       Titulo: ['Título', 'Título completo da obra. Aparece no cartão da listagem e no topo da página do post.'],
-      Autoria: ['Autoria', 'Quem escreveu ou produziu a obra. Ex.: Simone Raquel Batista Ferreira.'],
-      Ano: ['Ano', 'Ano da publicação ou produção. Ex.: 2018.'],
-      Referencia: ['Referência bibliográfica', 'Onde foi publicado. Ex.: Revista Geografares, n. 8, 2010. Aparece no fim da página do post.'],
+      Autoria: ['Autoria (opcional)', 'Quem escreveu, fotografou, filmou ou produziu. Ex.: Simone Raquel Batista Ferreira.'],
+      Ano: ['Ano (opcional)', 'Ano em que o material foi produzido ou publicado. Ex.: 2018.'],
+      Referencia: ['Onde foi publicado (opcional)', 'Só para material que já saiu em outro lugar: revista, livro, evento, jornal ou site. Ex.: Revista Geografares, n. 8, 2010. Para fotos, vídeos e materiais próprios, deixe em branco.'],
       categorias: ['Categoria', 'Seção do site onde o post aparece. Obrigatória: sem categoria o post não aparece em lugar nenhum.'],
       Capa: ['Imagem de capa', 'Foto que ilustra o post no cartão da listagem. Envie a imagem E preencha o crédito.'],
       Conteudo: ['Conteúdo', 'Blocos que formam a página do post, na ordem em que aparecem. Comece por um bloco Texto: o início dele vira a chamada do cartão na listagem. Título e autoria já aparecem automaticamente, não precisa repetir aqui.'],
