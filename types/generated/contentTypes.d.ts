@@ -377,7 +377,7 @@ export interface ApiAmigoAmigo extends Struct.SingleTypeSchema {
     singularName: 'amigo';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Conteudo: Schema.Attribute.DynamicZone<
@@ -390,7 +390,6 @@ export interface ApiAmigoAmigo extends Struct.SingleTypeSchema {
         'pagina.imagem',
         'pagina.galeria',
         'pagina.documento',
-        'pagina.dados',
         'pagina.audio',
       ]
     >;
@@ -416,7 +415,7 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
     singularName: 'categoria';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -448,7 +447,7 @@ export interface ApiHistoriaHistoria extends Struct.SingleTypeSchema {
     singularName: 'historia';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Conteudo: Schema.Attribute.DynamicZone<
@@ -461,7 +460,6 @@ export interface ApiHistoriaHistoria extends Struct.SingleTypeSchema {
         'pagina.imagem',
         'pagina.galeria',
         'pagina.documento',
-        'pagina.dados',
         'pagina.audio',
       ]
     > &
@@ -485,21 +483,24 @@ export interface ApiHistoriaHistoria extends Struct.SingleTypeSchema {
 export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
   collectionName: 'paginas';
   info: {
-    description: '';
+    description: 'Cada post do acervo';
     displayName: 'P\u00E1ginas';
     pluralName: 'paginas';
     singularName: 'pagina';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
+    Ano: Schema.Attribute.String;
+    Autoria: Schema.Attribute.String;
     Capa: Schema.Attribute.Component<'pagina.imagem', false> &
       Schema.Attribute.Required;
     categorias: Schema.Attribute.Relation<
       'oneToOne',
       'api::categoria.categoria'
-    >;
+    > &
+      Schema.Attribute.Required;
     Conteudo: Schema.Attribute.DynamicZone<
       [
         'pagina.titulo',
@@ -517,8 +518,7 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Dados: Schema.Attribute.Component<'pagina.dados', false> &
-      Schema.Attribute.Required;
+    Descricao: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -526,6 +526,8 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Referencia: Schema.Attribute.Text;
+    Titulo: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

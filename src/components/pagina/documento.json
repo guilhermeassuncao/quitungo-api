@@ -8,7 +8,7 @@
   "attributes": {
     "Nome": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "Documento": {
       "type": "media",

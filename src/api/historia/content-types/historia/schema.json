@@ -7,7 +7,7 @@
     "displayName": "Quem Somos"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "Conteudo": {
@@ -21,7 +21,6 @@
         "pagina.imagem",
         "pagina.galeria",
         "pagina.documento",
-        "pagina.dados",
         "pagina.audio"
       ],
       "required": true

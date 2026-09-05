@@ -5,12 +5,41 @@
     "singularName": "pagina",
     "pluralName": "paginas",
     "displayName": "Páginas",
-    "description": ""
+    "description": "Cada post do acervo"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Descricao": {
+      "type": "text",
+      "required": true
+    },
+    "Autoria": {
+      "type": "string"
+    },
+    "Ano": {
+      "type": "string"
+    },
+    "Referencia": {
+      "type": "text"
+    },
+    "Capa": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pagina.imagem",
+      "required": true
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria",
+      "required": true
+    },
     "Conteudo": {
       "type": "dynamiczone",
       "components": [
@@ -24,23 +53,6 @@
         "pagina.youtube",
         "pagina.midia"
       ],
-      "required": true
-    },
-    "Capa": {
-      "type": "component",
-      "repeatable": false,
-      "component": "pagina.imagem",
-      "required": true
-    },
-    "categorias": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::categoria.categoria"
-    },
-    "Dados": {
-      "type": "component",
-      "repeatable": false,
-      "component": "pagina.dados",
       "required": true
     }
   }

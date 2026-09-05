@@ -12,17 +12,6 @@ export interface PaginaAudio extends Struct.ComponentSchema {
   };
 }
 
-export interface PaginaDados extends Struct.ComponentSchema {
-  collectionName: 'components_pagina_dados';
-  info: {
-    displayName: 'Dados';
-  };
-  attributes: {
-    Descricao: Schema.Attribute.Text & Schema.Attribute.Required;
-    Titulo: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
 export interface PaginaDocumento extends Struct.ComponentSchema {
   collectionName: 'components_pagina_documentos';
   info: {
@@ -32,7 +21,7 @@ export interface PaginaDocumento extends Struct.ComponentSchema {
   attributes: {
     Autor: Schema.Attribute.String;
     Documento: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
-    Nome: Schema.Attribute.String & Schema.Attribute.Required;
+    Nome: Schema.Attribute.String;
   };
 }
 
@@ -56,7 +45,7 @@ export interface PaginaImagem extends Struct.ComponentSchema {
   };
   attributes: {
     Autor: Schema.Attribute.String;
-    Imagem: Schema.Attribute.Media<'images'>;
+    Imagem: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -135,7 +124,6 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'pagina.audio': PaginaAudio;
-      'pagina.dados': PaginaDados;
       'pagina.documento': PaginaDocumento;
       'pagina.galeria': PaginaGaleria;
       'pagina.imagem': PaginaImagem;
